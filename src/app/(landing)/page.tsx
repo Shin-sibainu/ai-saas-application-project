@@ -1,14 +1,25 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+"use client";
+
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { HeroSection } from "@/components/sections/hero";
+import { FeaturesSection } from "@/components/sections/features";
+import { UseCasesSection } from "@/components/sections/use-cases";
+import { PricingSection } from "@/components/sections/pricing";
+import { FAQSection } from "@/components/sections/faq";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Button>
-          <Link href={"/dashboard"}>ダッシュボードに移動する</Link>
-        </Button>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <HeroSection />
+        <FeaturesSection />
+        <UseCasesSection />
+        <PricingSection />
+        <FAQSection />
       </main>
+      <Footer />
     </div>
   );
 }

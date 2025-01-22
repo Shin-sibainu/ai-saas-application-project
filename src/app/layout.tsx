@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider afterSignOutUrl={"/dashboard"}>
       <html lang="ja">
         <body className={`${notoSansJP.className} antialiased`}>
           {children}
